@@ -7,7 +7,10 @@ import Banner from '../Organisms/Banner';
 
 const Speciality = ({ speciality }) => {
 
-  useEffect(() => store.dispatch(getSpeciality(1), []))
+  useEffect(
+    () => {
+      store.dispatch(getSpeciality(1))
+    }, [])
 
   return (
     <>
