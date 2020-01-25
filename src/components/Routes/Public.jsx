@@ -6,15 +6,11 @@ const Public = ({ component: Component, ...rest }) => {
   const userLogged = localStorage.getItem('token');
 
   if (userLogged) {
-    return (
-      <div>
-        <Redirect to="/" />
-      </div>
-    )
+    return <Redirect to="/" />
   }
 
-  return <Route {...rest} render={Component} />
+  return <Route {...rest} component={Component} />
 
 }
 
-export default Public
+export default Public;

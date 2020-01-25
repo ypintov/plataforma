@@ -68,13 +68,6 @@ export const teacherReducer = (state = {}, action) => {
       teachers: action.teachers
     }
   }
-
-  if (action.type === GET_SPECIALITY) {
-    return {
-      ...state,
-      speciality: action.speciality
-    }
-  }
   return state;
 }
 

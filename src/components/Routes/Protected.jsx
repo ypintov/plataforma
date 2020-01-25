@@ -6,14 +6,10 @@ const Protected = ({ component: Component, ...rest }) => {
   const userLogged = localStorage.getItem('token');
 
   if (!userLogged) {
-    return (
-      <div>
-        <Redirect to="/login" />
-      </div>
-    )
+    return <Redirect to="/login" />
   }
 
-  return <Route {...rest} render={Component} />
+  return <Route {...rest} component={Component} />
 
 }
 
